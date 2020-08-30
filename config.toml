@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "virgil246.github.io"
+baseURL = "https://virgil246.github.io/"
 title = "virgil246的Blog"
 languageCode = "zh-TW"
 hasCJKLanguage = true

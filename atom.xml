@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle><updated>2020-09-01T16:11:33+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-01T16:11:29+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle><updated>2020-09-01T16:43:12+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-01T16:43:08+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+&lt;blockquote>
+&lt;p>The world’s fastest framework for building websites&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;del>我也不知道是不是&lt;/del>&lt;/p>
+&lt;h2 id="github-actionshttpsgithubcomfeaturesactions">&lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>&lt;/h2>
+&lt;blockquote>
+&lt;p>Automate your workflow
+from idea to production&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>CI/CD工具&lt;/li>
+&lt;/ul>
+&lt;h3 id="step">Step&lt;/h3>
+&lt;ol>
+&lt;li>安裝 Hugo
+&lt;ul>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/installing/#chocolatey-windows">Windows(Chocolatey)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/installing/#homebrew-linux">Homebrew (Linux)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>版本有分 &lt;strong>hugo-extended/hugo&lt;/strong> 有些Theme會需要安裝hugo-extended&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>建立 WebSite
+&lt;ul>
+&lt;li>&lt;code>hugo new site hugo_blog&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Init Commit
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> hugo_blog
+git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>建立 GitHub Actions
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/marketplace/actions/hugo-setup">hugo-setup&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>放在 &lt;code>./github/workflows/main.yml&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-yml" data-lang="yml">&lt;span class="k">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>github&lt;span class="w"> &lt;/span>pages&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- master&lt;span class="w"> &lt;/span>&lt;span class="c"># Set a branch to deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>ubuntu&lt;span class="m">-18.04&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="k">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>actions/checkout@v2&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">fetch-depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="k">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>Setup&lt;span class="w"> &lt;/span>Hugo&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>peaceiris/actions-hugo@v2&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="k">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>Build&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>hugo&lt;span class="w"> &lt;/span>--minify&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="k">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>Deploy&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>peaceiris/actions-gh-pages@v3&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">github_token&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>${{&lt;span class="w"> &lt;/span>secrets.GITHUB_TOKEN&lt;span class="w"> &lt;/span>}}&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>./public&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>推上 GitHub&lt;br>
+&lt;code>&amp;lt;USERNAME&amp;gt;.github.io&lt;/code> 這個repo &lt;br>
+或是置於其他的repo
+&lt;img src="https://guides.github.com/features/pages/repo-settings.png" alt="">
+&lt;img src="https://guides.github.com/features/pages/launch-theme-chooser.png" alt="">
+&lt;ul>
+&lt;li>將Branch改為 &lt;strong>gh-pages&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>因為上面的Github Actions 會把build完成的網站推到gh-pages這個分支&lt;br>
+&lt;img src="https://i.imgur.com/73x9wu8.png" alt="">&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>從此以後 你每次推送上github的commit Github都會自動幫你輸出網頁到&lt;br>
+&lt;code>https://&amp;lt;USERNAME&amp;gt;.github.io&lt;/code>&lt;/li>
+&lt;/ul></content><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-01T16:43:08+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
 &lt;li>簡單記錄一下GitHub Actions的 Scheduler功能&lt;/li>
 &lt;li>&lt;a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule">GitHub Docs&lt;/a>&lt;/li>
 &lt;/ul>

@@ -62,14 +62,19 @@ from idea to production
                 with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 publish_dir: ./public
+        ```  
+        * 再次commit
+        ```bash
+        git commit -m "add workflows"
         ```
 5. 推上 GitHub  
    `<USERNAME>.github.io`  這個repo    
    或是置於其他的repo
+   * 並做以下設定
    ![](https://guides.github.com/features/pages/repo-settings.png)
    ![](https://guides.github.com/features/pages/launch-theme-chooser.png)
    * 將Branch改為 **gh-pages**  
-    > 因為上面的Github Actions 會把build完成的網站推到gh-pages這個分支  
-    ![](https://i.imgur.com/73x9wu8.png)
-* 從此以後 你每次推送上github的commit Github都會自動幫你輸出網頁到  
-`https://<USERNAME>.github.io` 
+        > 因為上面的Github Actions 會把build完成的網站推到gh-pages這個分支  
+        ![](https://i.imgur.com/73x9wu8.png)
+   * 從此以後 你每次推送上github的commit Github都會自動幫你輸出網頁到  
+   `https://<USERNAME>.github.io` 

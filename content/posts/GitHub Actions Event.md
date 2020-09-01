@@ -2,6 +2,7 @@
 title: "GitHub Action Event(Scheduler)"
 date: 2020-08-31T01:41:31+08:00
 draft: false
+tags: ["Github Actions"]
 ---
 
 * 簡單記錄一下GitHub Actions的 Scheduler功能

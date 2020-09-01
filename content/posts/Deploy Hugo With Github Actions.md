@@ -15,14 +15,14 @@ from idea to production
    * CI/CD工具
 ### Step
 1. 安裝 Hugo
-   * [Windows(Chocolatey)](https://gohugo.io/getting-started/installing/#chocolatey-windows)
-   * [Homebrew (Linux)](https://gohugo.io/getting-started/installing/#homebrew-linux)
+   * [Windows (Chocolatey)](https://gohugo.io/getting-started/installing/#chocolatey-windows)
+   * [Linux (Homebrew)](https://gohugo.io/getting-started/installing/#homebrew-linux)
   
   * 版本有分 **hugo-extended/hugo** 有些Theme會需要安裝hugo-extended  
 
 2. 建立 WebSite
    * `hugo new site hugo_blog`
-3. Init Commit
+3. Init Commit  
     ```bash
     cd hugo_blog
     git commit -m "init commit"

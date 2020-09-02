@@ -585,7 +585,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     ## Disqus
-    enableDisqus = true
+    enableDisqus = false
     disqusShortname = "virgil246-blog"
 
     ## Valine
@@ -610,12 +610,12 @@ uglyURLs = false
     # 说明：https://valine.js.org/
 
     ## Utterances
-    enableUtterances = false
-    utterancesRepo = ""
+    enableUtterances = true
+    utterancesRepo = "virgil246/Comments"
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
     utterancesThemeDark = "photon-dark"
-    utterancesLabel = ""
+    utterancesLabel = "Blogs"
     # 说明：https://utteranc.es/
 
 

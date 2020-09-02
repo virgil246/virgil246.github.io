@@ -4,4 +4,4 @@ date: {{ .Date }}
 draft: true
 ---
 
->有問題可以在下方disqus留言喔
+>有問題可以在下方utterances留言喔

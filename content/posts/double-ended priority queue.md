@@ -111,3 +111,5 @@ $=i+2^{(i的level - 2)}$
 * 操作
   * Insert X
   * Delete Min
+# Reference
+* [圖解 Double-ended Priority Queue | 進階樹](https://medium.com/%E7%8B%97%E5%A5%B4%E5%B7%A5%E7%A8%8B%E5%B8%AB/%E5%9C%96%E8%A7%A3-double-ended-priority-queue-%E9%80%B2%E9%9A%8E%E6%A8%B9-1ae18d2ca402)

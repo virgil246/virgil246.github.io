@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 02 Sep 2020 02:59:20 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>用 Github Actions 部屬 Hugo 網站</title><link>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</link><guid isPermaLink="true">https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</guid><pubDate>Wed, 02 Sep 2020 00:15:01 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 02 Sep 2020 03:10:08 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>用 Github Actions 部屬 Hugo 網站</title><link>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</link><guid isPermaLink="true">https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</guid><pubDate>Wed, 02 Sep 2020 00:15:01 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
 &lt;blockquote>
 &lt;p>The world’s fastest framework for building websites&lt;/p>
 &lt;/blockquote>
@@ -24,9 +24,9 @@ from idea to production&lt;/p>
 &lt;li>版本有分 &lt;strong>hugo-extended/hugo&lt;/strong> 有些Theme會需要安裝hugo-extended&lt;/li>
 &lt;/ul>
 &lt;ol start="2">
-&lt;li>建立 WebSite
+&lt;li>建立 Blog
 &lt;ul>
-&lt;li>&lt;code>hugo new site hugo_blog&lt;/code>&lt;/li>
+&lt;li>&lt;code>hugo new site blog&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Init Commit
@@ -36,11 +36,66 @@ from idea to production&lt;/p>
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> hugo_blog
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> blog
 git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>安裝Themes(以&lt;a href="https://themes.gohugo.io/hugo-theme-meme/">MemE&lt;/a>為例)
+&lt;strong>需要hugo extended&lt;/strong>
+&lt;ol>
+&lt;li>安裝 MemE
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> blog
+blog $ git init
+blog $ git submodule add --depth &lt;span class="m">1&lt;/span> https://github.com/reuixiy/hugo-theme-meme.git themes/meme
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>用範例&lt;code>config.toml&lt;/code> 取代原本的&lt;code>config.toml&lt;/code>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">rm config.toml &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> cp themes/meme/config-examples/en/config.toml config.toml
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>建立posts及about頁面
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo new &lt;span class="s2">&amp;#34;posts/hello-world.md&amp;#34;&lt;/span>
+hugo new &lt;span class="s2">&amp;#34;about/_index.md&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>查看效果
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo server -D
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
 &lt;li>建立 GitHub Actions
 &lt;ul>
 &lt;li>
@@ -145,7 +200,7 @@ git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
 &lt;code>https://&amp;lt;USERNAME&amp;gt;.github.io&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ol></description><category domain="https://virgil246.github.io/tags/github-actions/">Github Actions</category><category domain="https://virgil246.github.io/tags/hugo/">Hugo</category><category domain="https://virgil246.github.io/tags/blogs/">Blogs</category></item><item><title>GitHub Action Event(Scheduler)</title><link>https://virgil246.github.io/posts/github-actions-event/</link><guid isPermaLink="true">https://virgil246.github.io/posts/github-actions-event/</guid><pubDate>Mon, 31 Aug 2020 01:41:31 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
+&lt;/ol></description><category domain="https://virgil246.github.io/tags/github-actions/">Github Actions</category><category domain="https://virgil246.github.io/tags/hugo/">Hugo</category><category domain="https://virgil246.github.io/tags/blogs/">Blogs</category><category domain="https://virgil246.github.io/tags/%E6%95%99%E5%AD%B8/">教學</category></item><item><title>GitHub Action Event(Scheduler)</title><link>https://virgil246.github.io/posts/github-actions-event/</link><guid isPermaLink="true">https://virgil246.github.io/posts/github-actions-event/</guid><pubDate>Mon, 31 Aug 2020 01:41:31 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
 &lt;li>簡單記錄一下GitHub Actions的 Scheduler功能&lt;/li>
 &lt;li>&lt;a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule">GitHub Docs&lt;/a>&lt;/li>
 &lt;/ul>

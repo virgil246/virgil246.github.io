@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-02T02:59:20+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-02T02:59:17+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-02T03:10:08+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-02T03:10:05+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
 &lt;blockquote>
 &lt;p>The world’s fastest framework for building websites&lt;/p>
 &lt;/blockquote>
@@ -24,9 +24,9 @@ from idea to production&lt;/p>
 &lt;li>版本有分 &lt;strong>hugo-extended/hugo&lt;/strong> 有些Theme會需要安裝hugo-extended&lt;/li>
 &lt;/ul>
 &lt;ol start="2">
-&lt;li>建立 WebSite
+&lt;li>建立 Blog
 &lt;ul>
-&lt;li>&lt;code>hugo new site hugo_blog&lt;/code>&lt;/li>
+&lt;li>&lt;code>hugo new site blog&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Init Commit
@@ -36,11 +36,66 @@ from idea to production&lt;/p>
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> hugo_blog
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> blog
 git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>安裝Themes(以&lt;a href="https://themes.gohugo.io/hugo-theme-meme/">MemE&lt;/a>為例)
+&lt;strong>需要hugo extended&lt;/strong>
+&lt;ol>
+&lt;li>安裝 MemE
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> blog
+blog $ git init
+blog $ git submodule add --depth &lt;span class="m">1&lt;/span> https://github.com/reuixiy/hugo-theme-meme.git themes/meme
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>用範例&lt;code>config.toml&lt;/code> 取代原本的&lt;code>config.toml&lt;/code>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">rm config.toml &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> cp themes/meme/config-examples/en/config.toml config.toml
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>建立posts及about頁面
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo new &lt;span class="s2">&amp;#34;posts/hello-world.md&amp;#34;&lt;/span>
+hugo new &lt;span class="s2">&amp;#34;about/_index.md&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>查看效果
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">hugo server -D
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
 &lt;li>建立 GitHub Actions
 &lt;ul>
 &lt;li>
@@ -145,7 +200,7 @@ git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
 &lt;code>https://&amp;lt;USERNAME&amp;gt;.github.io&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ol></content><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-02T02:59:17+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
+&lt;/ol></content><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/><category scheme="https://virgil246.github.io/tags/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-02T03:10:05+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
 &lt;li>簡單記錄一下GitHub Actions的 Scheduler功能&lt;/li>
 &lt;li>&lt;a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule">GitHub Docs&lt;/a>&lt;/li>
 &lt;/ul>

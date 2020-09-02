@@ -1,4 +1,218 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-02T04:31:50+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-02T04:31:47+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-02T15:02:24+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">Double Ended Priority Queue</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/double-ended-priority-queue/"/><id>https://virgil246.github.io/posts/double-ended-priority-queue/</id><updated>2020-09-02T15:02:22+00:00</updated><published>2020-09-02T21:37:54+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Min-Max Heap Def 一種Complete B.T. Min-level Max-level交錯 Root為min-level 若N……</summary><content type="html">&lt;h1 id="min-max-heap">Min-Max Heap&lt;/h1>
+&lt;h2 id="def">Def&lt;/h2>
+&lt;ul>
+&lt;li>一種Complete B.T.&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Min-level Max-level交錯&lt;/li>
+&lt;li>Root為min-level&lt;/li>
+&lt;li>若Node X為 Min-level 代表以X為Root的子樹中，X最小&lt;/li>
+&lt;li>若Node X為 Max-level 代表以X為Root的子樹中，X最大&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>操作
+&lt;ul>
+&lt;li>Insert X
+&lt;ol>
+&lt;li>將X置於 last Node的下一個&lt;/li>
+&lt;li>X的parent P&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Case:
+&lt;ol>
+&lt;li>X位於 Min-level
+&lt;ol>
+&lt;li>&lt;code>X.val &amp;lt; P.val&lt;/code>
+&lt;ol>
+&lt;li>挑戰上面的Min-level&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;code>X.val &amp;gt; P.val&lt;/code>
+&lt;ol>
+&lt;li>&lt;code>Swap(X,P)&lt;/code>&lt;/li>
+&lt;li>挑戰上面的Max-level&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>X位於 Max-level
+&lt;ol>
+&lt;li>&lt;code>X.val &amp;gt; P.val&lt;/code>
+&lt;ol>
+&lt;li>挑戰上面的Max-level&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;code>X.val &amp;gt; P.val&lt;/code>
+&lt;ol>
+&lt;li>&lt;code>Swap(X,P)&lt;/code>&lt;/li>
+&lt;li>挑戰上面的Min-level&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Delete Max&lt;/li>
+&lt;li>Delete Min
+&lt;ol>
+&lt;li>移除Root&lt;/li>
+&lt;li>刪除Last Node X&lt;/li>
+&lt;li>X插入Root&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Case
+&lt;ol>
+&lt;li>
+&lt;p>X 無child 停止&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>X 有child 無 grandchild&lt;/p>
+&lt;ol>
+&lt;li>找出child中最小值 k
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="k">if&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">k&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>有grandchild&lt;/p>
+&lt;ol>
+&lt;li>找出grandchild中最小 k ，p為k之parent&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="k">if&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">//與 min-level 比較
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">k&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="nx">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="c1">// 換下去之後要跟 max-level 比較
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">//以K的原位作為ROOT再次判斷case
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Switch&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="deap">Deap&lt;/h1>
+&lt;h2 id="def-1">Def&lt;/h2>
+&lt;ul>
+&lt;li>Complete B.T.&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Dummy Root(No Data)&lt;/li>
+&lt;li>Root 左子樹為Min-Heap&lt;/li>
+&lt;li>Root 右子樹為Max-Heap&lt;/li>
+&lt;li>若i為Min-Heap中某Node，令j為i在Max-Heap中對應的Node，則&lt;code>Deap[i]&amp;lt;=Deap[j]&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>$j=i+(i 的上一層最多Node數)$&lt;br>
+$=i+2^{(i的level - 1)}-1$&lt;br>
+$=i+2^{(i的level - 2)}$&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>求i的level&lt;br>
+$2^{(k-1)}=i$&lt;br>
+$k=\lceil log_2{(i+1)}\rceil$&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>操作
+&lt;ul>
+&lt;li>Insert X
+&lt;ol>
+&lt;li>將X置於Last Node的下一個位置&lt;/li>
+&lt;li>Case:
+&lt;ol>
+&lt;li>
+&lt;p>X在 Min-Heap j為其在 Max-Heap對應位置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="k">if&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="nx">Deap&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]{&lt;/span>
+&lt;span class="nx">Deap&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">]=&lt;/span>&lt;span class="nx">Deap&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="nx">MAX&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Heap&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nf">Insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Deap&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">Min&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Heap&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nf">Insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Deap&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>X在 Max-Heap j為其在 Min-Heap對應位置&lt;/p>
+&lt;pre>&lt;code>if x &amp;lt; Deap[j]{
+Deap[n]=Deap[j]
+Min-Heap-Insert(Deap,j,X)
+} else {
+Max-Heap-Insert(Deap,n,x)
+}
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Delete min
+&lt;ol>
+&lt;li>移除左子樹Root&lt;/li>
+&lt;li>刪除Last Node X&lt;/li>
+&lt;li>左子樹Root的空格，由子點min{Ltree,Rtree}向上遞補&lt;/li>
+&lt;li>Insert X&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="smmhsymmetric-min-max-heap">SMMH(Symmetric Min-Max Heap)&lt;/h1>
+&lt;h2 id="def-2">Def&lt;/h2>
+&lt;ul>
+&lt;li>Complete B.T. &amp;amp; Dummy Root&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>&lt;code>Left Sibling &amp;lt;= Right Sibling&lt;/code>&lt;/li>
+&lt;li>若 node X 有Grandparent 則Grandparent的Left child&amp;lt;=X&lt;/li>
+&lt;li>則Grandparent的Right child&amp;gt;=X&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>操作
+&lt;ul>
+&lt;li>Insert X&lt;/li>
+&lt;li>Delete Min&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></content><category scheme="https://virgil246.github.io/tags/data-structure/" term="Data Structure" label="Data Structure"/><category scheme="https://virgil246.github.io/tags/heap/" term="Heap" label="Heap"/></entry><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-02T15:02:22+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
 &lt;blockquote>
 &lt;p>The world’s fastest framework for building websites&lt;/p>
 &lt;/blockquote>
@@ -34,9 +248,11 @@ from idea to production&lt;/p>
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> blog
+git init
 git commit -m &lt;span class="s2">&amp;#34;init commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -203,7 +419,7 @@ hugo new &lt;span class="s2">&amp;#34;about/_index.md&amp;#34;&lt;/span>
 &lt;/ol>
 &lt;blockquote>
 &lt;p>有問題可以在下方utterances 留言喔&lt;/p>
-&lt;/blockquote></content><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/><category scheme="https://virgil246.github.io/tags/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-02T04:31:47+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
+&lt;/blockquote></content><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/><category scheme="https://virgil246.github.io/tags/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-02T15:02:22+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
 &lt;li>簡單記錄一下GitHub Actions的 Scheduler功能&lt;/li>
 &lt;li>&lt;a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule">GitHub Docs&lt;/a>&lt;/li>
 &lt;/ul>

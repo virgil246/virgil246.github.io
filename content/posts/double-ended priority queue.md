@@ -3,7 +3,6 @@ title: "Double Ended Priority Queue"
 date: 2020-09-02T21:37:54+08:00
 draft: false
 tags: ["Data Structure","Heap"]
-catagories: "筆記"
 ---
 
 # Min-Max Heap

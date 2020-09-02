@@ -2,7 +2,7 @@
 title: "用 Github Actions 部屬 Hugo 網站"
 date: 2020-09-02T00:15:01+08:00
 draft: false
-tags: ["Github Actions","Hugo","Blogs"]
+tags: ["Github Actions","Hugo","Blogs","教學"]
 ---
 ## [Hugo](https://gohugo.io/)
 > The world’s fastest framework for building websites  
@@ -20,14 +20,35 @@ from idea to production
   
   * 版本有分 **hugo-extended/hugo** 有些Theme會需要安裝hugo-extended  
 
-2. 建立 WebSite
-   * `hugo new site hugo_blog`
+2. 建立 Blog
+   * `hugo new site blog`
 3. Init Commit  
     ```bash
-    cd hugo_blog
+    cd blog
     git commit -m "init commit"
     ```
-4. 建立 GitHub Actions  
+* 安裝Themes(以[MemE](https://themes.gohugo.io/hugo-theme-meme/)為例)
+  **需要hugo extended**  
+    1.  安裝 MemE
+        ```bash
+        cd blog
+        blog $ git init
+        blog $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
+        ```  
+    2.  用範例`config.toml` 取代原本的`config.toml`
+        ```bash
+        rm config.toml && cp themes/meme/config-examples/en/config.toml config.toml
+        ```
+    3. 建立posts及about頁面
+        ```bash 
+        hugo new "posts/hello-world.md"
+        hugo new "about/_index.md" 
+        ```
+    4. 查看效果
+        ```bash
+        hugo server -D 
+        ```
+1. 建立 GitHub Actions  
    * [hugo-setup](https://github.com/marketplace/actions/hugo-setup)
    * 放在 `./github/workflows/main.yml`
 
@@ -67,7 +88,7 @@ from idea to production
         ```bash
         git commit -m "add workflows"
         ```
-5. 推上 GitHub  
+2. 推上 GitHub  
    `<USERNAME>.github.io`  這個repo    
    或是置於其他的repo
    * 並做以下設定

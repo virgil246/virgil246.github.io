@@ -25,6 +25,7 @@ from idea to production
 3. Init Commit  
     ```bash
     cd blog
+    git init
     git commit -m "init commit"
     ```
 * 安裝Themes(以[MemE](https://themes.gohugo.io/hugo-theme-meme/)為例)

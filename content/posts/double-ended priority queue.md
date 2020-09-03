@@ -109,7 +109,14 @@ $=i+2^{(i的level - 2)}$
 2. 若 node X 有Grandparent 則Grandparent的Left child<=X
 3. 則Grandparent的Right child>=X
 * 操作
-  * Insert X
-  * Delete Min
+  * Insert X  
+    1. 置於Last Node的下一個位置
+    2. 按照Policy 1 調整
+    3. 按照Policy 2 & 3 調整
+  * Delete Min  
+    1. 移除左子樹的Root
+    2. 刪除Last Node X
+    3. 將X置入左子樹的Root，按照Policy 2 調整樹
+    4. 按照Policy 1驗證樹
 # Reference
 * [圖解 Double-ended Priority Queue | 進階樹](https://medium.com/%E7%8B%97%E5%A5%B4%E5%B7%A5%E7%A8%8B%E5%B8%AB/%E5%9C%96%E8%A7%A3-double-ended-priority-queue-%E9%80%B2%E9%9A%8E%E6%A8%B9-1ae18d2ca402)

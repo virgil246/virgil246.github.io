@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 02 Sep 2020 15:45:32 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Double Ended Priority Queue</title><link>https://virgil246.github.io/posts/double-ended-priority-queue/</link><guid isPermaLink="true">https://virgil246.github.io/posts/double-ended-priority-queue/</guid><pubDate>Wed, 02 Sep 2020 21:37:54 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="min-max-heap">Min-Max Heap&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Thu, 03 Sep 2020 04:59:44 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Double Ended Priority Queue</title><link>https://virgil246.github.io/posts/double-ended-priority-queue/</link><guid isPermaLink="true">https://virgil246.github.io/posts/double-ended-priority-queue/</guid><pubDate>Wed, 02 Sep 2020 21:37:54 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="min-max-heap">Min-Max Heap&lt;/h1>
 &lt;h2 id="def">Def&lt;/h2>
 &lt;ul>
 &lt;li>一種Complete B.T.&lt;/li>
@@ -208,15 +208,80 @@ Max-Heap-Insert(Deap,n,x)
 &lt;ul>
 &lt;li>操作
 &lt;ul>
-&lt;li>Insert X&lt;/li>
-&lt;li>Delete Min&lt;/li>
+&lt;li>Insert X
+&lt;ol>
+&lt;li>置於Last Node的下一個位置&lt;/li>
+&lt;li>按照Policy 1 調整&lt;/li>
+&lt;li>按照Policy 2 &amp;amp; 3 調整&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Delete Min
+&lt;ol>
+&lt;li>移除左子樹的Root&lt;/li>
+&lt;li>刪除Last Node X&lt;/li>
+&lt;li>將X置入左子樹的Root，按照Policy 2 調整樹&lt;/li>
+&lt;li>按照Policy 1驗證樹&lt;/li>
+&lt;/ol>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="reference">Reference&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://medium.com/%E7%8B%97%E5%A5%B4%E5%B7%A5%E7%A8%8B%E5%B8%AB/%E5%9C%96%E8%A7%A3-double-ended-priority-queue-%E9%80%B2%E9%9A%8E%E6%A8%B9-1ae18d2ca402">圖解 Double-ended Priority Queue | 進階樹&lt;/a>&lt;/li>
-&lt;/ul></description><category domain="https://virgil246.github.io/categories/%E7%AD%86%E8%A8%98/">筆記</category><category domain="https://virgil246.github.io/tags/data-structure/">Data Structure</category><category domain="https://virgil246.github.io/tags/heap/">Heap</category></item><item><title>用 Github Actions 部屬 Hugo 網站</title><link>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</link><guid isPermaLink="true">https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</guid><pubDate>Wed, 02 Sep 2020 00:15:01 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+&lt;/ul></description><category domain="https://virgil246.github.io/categories/%E7%AD%86%E8%A8%98/">筆記</category><category domain="https://virgil246.github.io/tags/data-structure/">Data Structure</category><category domain="https://virgil246.github.io/tags/heap/">Heap</category></item><item><title>Flutter Start</title><link>https://virgil246.github.io/posts/flutter-start/</link><guid isPermaLink="true">https://virgil246.github.io/posts/flutter-start/</guid><pubDate>Wed, 02 Sep 2020 11:15:00 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="安裝httpsflutterdevdocsget-startedinstall">&lt;a href="https://flutter.dev/docs/get-started/install">安裝&lt;/a>&lt;/h1>
+&lt;h2 id="以windows為例httpsflutterdevdocsget-startedinstallwindows">&lt;a href="https://flutter.dev/docs/get-started/install/windows">以Windows為例&lt;/a>&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://flutter.dev/docs/get-started/install/windows#system-requirements">系統需求&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>下載Flutter SDK&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>要記得解壓縮後或clone下來的&lt;code>PATH&lt;/code>
+&lt;ol>
+&lt;li>&lt;a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.3-stable.zip">直接下載&lt;/a>&lt;/li>
+&lt;li>&lt;code>git clone https://github.com/flutter/flutter.git -b stable&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>更新系統路徑
+&lt;ol>
+&lt;li>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://i.imgur.com/k6LNLZU.png" alt="">
+2. 環境變數
+&lt;img src="https://i.imgur.com/gFuEc08.png" alt="">
+3. 編輯Path這一項
+&lt;img src="https://i.imgur.com/b94pDhK.png" alt="">
+4. 加入 &lt;img src="https://i.imgur.com/q6ag2xh.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>記得是要按照你第一步放Flutter的&lt;code>PATH&lt;/code> 來更新這裡的使用者變數&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>到此 可以開啟 Windows Terminal, Powershell or cmd
+Run &lt;code>flutter doctor&lt;/code> 如果需要更詳細的除錯資訊 &lt;code>flutter doctor -v&lt;/code>
+&lt;blockquote>
+&lt;p>可以見到一些訊息&lt;/p>
+&lt;/blockquote>
+&lt;pre>&lt;code>[-] Android toolchain - develop for Android devices
+• Android SDK at D:\Android\sdk
+✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
+• Try re-installing or updating your Android SDK,
+visit https://flutter.dev/setup/#android-setup for detailed instructions.
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Note: Flutter relies on a full installation of Android Studio to supply its Android platform dependencies. However, you can write your Flutter apps in a number of editors; a later step discusses that.&lt;/p>
+&lt;/blockquote>
+&lt;ol start="4">
+&lt;li>安裝&lt;a href="https://developer.android.com/studio">Android Studio&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h1 id="設定idehttpsflutterdevdocsget-startedinstall">&lt;a href="https://flutter.dev/docs/get-started/install">設定IDE&lt;/a>&lt;/h1>
+&lt;blockquote>
+&lt;p>有問題可以在下方utterances 留言喔&lt;/p>
+&lt;/blockquote></description><category domain="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/">教學</category><category domain="https://virgil246.github.io/tags/flutter/">Flutter</category></item><item><title>用 Github Actions 部屬 Hugo 網站</title><link>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</link><guid isPermaLink="true">https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</guid><pubDate>Wed, 02 Sep 2020 00:15:01 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
 &lt;blockquote>
 &lt;p>The world’s fastest framework for building websites&lt;/p>
 &lt;/blockquote>

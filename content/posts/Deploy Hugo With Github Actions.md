@@ -2,7 +2,8 @@
 title: "用 Github Actions 部屬 Hugo 網站"
 date: 2020-09-02T00:15:01+08:00
 draft: false
-tags: ["Github Actions","Hugo","Blogs","教學"]
+tags: ["Github Actions","Hugo","Blogs"]
+categories: ["教學"]
 ---
 ## [Hugo](https://gohugo.io/)
 > The world’s fastest framework for building websites  

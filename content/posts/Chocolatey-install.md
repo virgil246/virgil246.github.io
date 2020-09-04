@@ -10,10 +10,10 @@ tags: ["Chocolatey","Windows"]
 # 簡介
 * [官方網站](https://chocolatey.org/)
 > The Package Manager for Windows
-* 就如同Ubuntu有 apt 、CentOS有 yum、MacOSX有Homebrew Windows也有套件安裝管理工具 => **Chocolatey**
+* 就如同Ubuntu有 [apt](https://zh.wikipedia.org/wiki/APT) 、CentOS有 [yum](https://zh.wikipedia.org/wiki/Yellowdog_Updater,_Modified)、MacOSX有[Homebrew](https://brew.sh/index_zh-tw) Windows也有套件安裝管理工具 => **Chocolatey**
 * 套件管理工具
-  * 下指令安裝工具
-  * 省去自己配置的麻煩
+  * 指令安裝套件工具
+  * 省去自己設定的麻煩
 # 安裝流程
 1. [官方安裝流程](https://chocolatey.org/install)
 * Requirements

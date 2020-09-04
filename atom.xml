@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-03T05:01:53+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">Double Ended Priority Queue</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/double-ended-priority-queue/"/><id>https://virgil246.github.io/posts/double-ended-priority-queue/</id><updated>2020-09-03T05:01:49+00:00</updated><published>2020-09-02T21:37:54+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Min-Max Heap Def 一種Complete B.T. Min-level Max-level交錯 Root為min-level 若N……</summary><content type="html">&lt;h1 id="min-max-heap">Min-Max Heap&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">virgil246的Blog</title><subtitle type="html">virgil246的Blog 專放一些踩坑筆記 教學</subtitle><updated>2020-09-04T15:16:03+00:00</updated><id>https://virgil246.github.io/</id><link rel="alternate" type="text/html" href="https://virgil246.github.io/"/><link rel="self" type="application/atom+xml" href="https://virgil246.github.io/atom.xml"/><author><name>virgil246</name><uri>https://virgil246.github.io/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator><entry><title type="text">Chocolatey 安裝</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/chocolatey-install/"/><id>https://virgil246.github.io/posts/chocolatey-install/</id><updated>2020-09-04T15:16:00+00:00</updated><published>2020-09-04T23:01:20+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡介 官方網站 The Package Manager for Windows 就如同Ubuntu有 apt 、CentOS有 yum、MacOSX有H……</summary><content type="html">&lt;h1 id="簡介">簡介&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://chocolatey.org/">官方網站&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>The Package Manager for Windows&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>就如同Ubuntu有 apt 、CentOS有 yum、MacOSX有Homebrew Windows也有套件安裝管理工具 =&amp;gt; &lt;strong>Chocolatey&lt;/strong>&lt;/li>
+&lt;li>套件管理工具
+&lt;ul>
+&lt;li>下指令安裝工具&lt;/li>
+&lt;li>省去自己配置的麻煩&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="安裝流程">安裝流程&lt;/h1>
+&lt;ol>
+&lt;li>&lt;a href="https://chocolatey.org/install">官方安裝流程&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Requirements
+&lt;ul>
+&lt;li>Windows 7+ / Windows Server 2003+&lt;/li>
+&lt;li>PowerShell v2+ (minimum is v3 for install from this website due to TLS 1.2 requirement)&lt;/li>
+&lt;li>.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)(minimum is 4.5 for install from this website due to TLS 1.2 requirement)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>我們就從最簡單的開始 &lt;strong>以系統管理員安裝&lt;/strong>&lt;/li>
+&lt;li>用系統管理員身分開啟PowerShell
+&lt;img src="https://i.imgur.com/gJTJPue.png" alt="">
+看到&lt;code>PS C:\WINDOWS\system32&amp;gt;&lt;/code>就是系統管理員權限了&lt;/li>
+&lt;li>執行這行
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="nb">Get-ExecutionPolicy&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果看到 &lt;code>Restricted&lt;/code> 則執行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">AllSigned&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">Bypass&lt;/span> &lt;span class="n">-Scope&lt;/span> &lt;span class="k">Process&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>執行這行開始安裝
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">Bypass&lt;/span> &lt;span class="n">-Scope&lt;/span> &lt;span class="k">Process&lt;/span> &lt;span class="n">-Force&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="no">[System.Net.ServicePointManager]&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="n">SecurityProtocol&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="no">[System.Net.ServicePointManager]&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="n">SecurityProtocol&lt;/span> &lt;span class="o">-bor&lt;/span> &lt;span class="n">3072&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nb">iex &lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nb">New-Object&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Net&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WebClient&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">DownloadString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://chocolatey.org/install.ps1&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>等他跑完也沒出現錯誤就安裝完成了&lt;/li>
+&lt;li>可以執行&lt;code>choco&lt;/code> 或 &lt;code>choco -?&lt;/code>
+查看如何使用chocolatey&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>有問題可以在下方utterances留言喔&lt;/p>
+&lt;/blockquote></content><category scheme="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/><category scheme="https://virgil246.github.io/tags/chocolatey/" term="Chocolatey" label="Chocolatey"/><category scheme="https://virgil246.github.io/tags/windows/" term="Windows" label="Windows"/></entry><entry><title type="text">Double Ended Priority Queue</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/double-ended-priority-queue/"/><id>https://virgil246.github.io/posts/double-ended-priority-queue/</id><updated>2020-09-04T15:16:00+00:00</updated><published>2020-09-02T21:37:54+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Min-Max Heap Def 一種Complete B.T. Min-level Max-level交錯 Root為min-level 若N……</summary><content type="html">&lt;h1 id="min-max-heap">Min-Max Heap&lt;/h1>
 &lt;h2 id="def">Def&lt;/h2>
 &lt;ul>
 &lt;li>一種Complete B.T.&lt;/li>
@@ -229,7 +307,7 @@ Max-Heap-Insert(Deap,n,x)
 &lt;h1 id="reference">Reference&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://medium.com/%E7%8B%97%E5%A5%B4%E5%B7%A5%E7%A8%8B%E5%B8%AB/%E5%9C%96%E8%A7%A3-double-ended-priority-queue-%E9%80%B2%E9%9A%8E%E6%A8%B9-1ae18d2ca402">圖解 Double-ended Priority Queue | 進階樹&lt;/a>&lt;/li>
-&lt;/ul></content><category scheme="https://virgil246.github.io/categories/%E7%AD%86%E8%A8%98/" term="筆記" label="筆記"/><category scheme="https://virgil246.github.io/tags/data-structure/" term="Data Structure" label="Data Structure"/><category scheme="https://virgil246.github.io/tags/heap/" term="Heap" label="Heap"/></entry><entry><title type="text">Flutter Start</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/flutter-start/"/><id>https://virgil246.github.io/posts/flutter-start/</id><updated>2020-09-03T05:01:49+00:00</updated><published>2020-09-02T11:15:00+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安裝 以Windows為例 系統需求 下載Flutter SDK 要記得解壓縮後或clone下來的……</summary><content type="html">&lt;h1 id="安裝httpsflutterdevdocsget-startedinstall">&lt;a href="https://flutter.dev/docs/get-started/install">安裝&lt;/a>&lt;/h1>
+&lt;/ul></content><category scheme="https://virgil246.github.io/categories/%E7%AD%86%E8%A8%98/" term="筆記" label="筆記"/><category scheme="https://virgil246.github.io/tags/data-structure/" term="Data Structure" label="Data Structure"/><category scheme="https://virgil246.github.io/tags/heap/" term="Heap" label="Heap"/></entry><entry><title type="text">Flutter Start</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/flutter-start/"/><id>https://virgil246.github.io/posts/flutter-start/</id><updated>2020-09-04T15:16:00+00:00</updated><published>2020-09-02T11:15:00+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安裝 以Windows為例 系統需求 下載Flutter SDK 要記得解壓縮後或clone下來的……</summary><content type="html">&lt;h1 id="安裝httpsflutterdevdocsget-startedinstall">&lt;a href="https://flutter.dev/docs/get-started/install">安裝&lt;/a>&lt;/h1>
 &lt;h2 id="以windows為例httpsflutterdevdocsget-startedinstallwindows">&lt;a href="https://flutter.dev/docs/get-started/install/windows">以Windows為例&lt;/a>&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://flutter.dev/docs/get-started/install/windows#system-requirements">系統需求&lt;/a>&lt;/li>
@@ -281,7 +359,7 @@ visit https://flutter.dev/setup/#android-setup for detailed instructions.
 &lt;h1 id="設定idehttpsflutterdevdocsget-startedinstall">&lt;a href="https://flutter.dev/docs/get-started/install">設定IDE&lt;/a>&lt;/h1>
 &lt;blockquote>
 &lt;p>有問題可以在下方utterances 留言喔&lt;/p>
-&lt;/blockquote></content><category scheme="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/><category scheme="https://virgil246.github.io/tags/flutter/" term="Flutter" label="Flutter"/></entry><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-03T05:01:49+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
+&lt;/blockquote></content><category scheme="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/><category scheme="https://virgil246.github.io/tags/flutter/" term="Flutter" label="Flutter"/></entry><entry><title type="text">用 Github Actions 部屬 Hugo 網站</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/deploy-hugo-with-github-actions/"/><id>https://virgil246.github.io/posts/deploy-hugo-with-github-actions/</id><updated>2020-09-04T15:16:00+00:00</updated><published>2020-09-02T00:15:01+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo The world’s fastest framework for building websites 我也不知道是不是 GitHub Actions Automate your workflow from idea to production CI/CD工具 Step 安裝 Hugo……</summary><content type="html">&lt;h2 id="hugohttpsgohugoio">&lt;a href="https://gohugo.io/">Hugo&lt;/a>&lt;/h2>
 &lt;blockquote>
 &lt;p>The world’s fastest framework for building websites&lt;/p>
 &lt;/blockquote>
@@ -488,7 +566,7 @@ hugo new &lt;span class="s2">&amp;#34;about/_index.md&amp;#34;&lt;/span>
 &lt;/ol>
 &lt;blockquote>
 &lt;p>有問題可以在下方utterances 留言喔&lt;/p>
-&lt;/blockquote></content><category scheme="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-03T05:01:49+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
+&lt;/blockquote></content><category scheme="https://virgil246.github.io/categories/%E6%95%99%E5%AD%B8/" term="教學" label="教學"/><category scheme="https://virgil246.github.io/tags/github-actions/" term="Github Actions" label="Github Actions"/><category scheme="https://virgil246.github.io/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://virgil246.github.io/tags/blogs/" term="Blogs" label="Blogs"/></entry><entry><title type="text">GitHub Action Event(Scheduler)</title><link rel="alternate" type="text/html" href="https://virgil246.github.io/posts/github-actions-event/"/><id>https://virgil246.github.io/posts/github-actions-event/</id><updated>2020-09-04T15:16:00+00:00</updated><published>2020-08-31T01:41:31+08:00</published><author><name>virgil246</name><uri>https://io-oi.me/</uri><email>virgil246@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">簡單記錄一下GitHub Actions的 Scheduler功能 GitHub Docs You can schedule a workflow to run at specific……</summary><content type="html">&lt;ul>
 &lt;li>簡單記錄一下GitHub Actions的 Scheduler功能&lt;/li>
 &lt;li>&lt;a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule">GitHub Docs&lt;/a>&lt;/li>
 &lt;/ul>

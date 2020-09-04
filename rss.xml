@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 04 Sep 2020 15:16:03 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Chocolatey 安裝</title><link>https://virgil246.github.io/posts/chocolatey-install/</link><guid isPermaLink="true">https://virgil246.github.io/posts/chocolatey-install/</guid><pubDate>Fri, 04 Sep 2020 23:01:20 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="簡介">簡介&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 04 Sep 2020 15:19:00 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Chocolatey 安裝</title><link>https://virgil246.github.io/posts/chocolatey-install/</link><guid isPermaLink="true">https://virgil246.github.io/posts/chocolatey-install/</guid><pubDate>Fri, 04 Sep 2020 23:01:20 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="簡介">簡介&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://chocolatey.org/">官方網站&lt;/a>&lt;/li>
 &lt;/ul>
@@ -6,11 +6,11 @@
 &lt;p>The Package Manager for Windows&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>就如同Ubuntu有 apt 、CentOS有 yum、MacOSX有Homebrew Windows也有套件安裝管理工具 =&amp;gt; &lt;strong>Chocolatey&lt;/strong>&lt;/li>
+&lt;li>就如同Ubuntu有 &lt;a href="https://zh.wikipedia.org/wiki/APT">apt&lt;/a> 、CentOS有 &lt;a href="https://zh.wikipedia.org/wiki/Yellowdog_Updater,_Modified">yum&lt;/a>、MacOSX有&lt;a href="https://brew.sh/index_zh-tw">Homebrew&lt;/a> Windows也有套件安裝管理工具 =&amp;gt; &lt;strong>Chocolatey&lt;/strong>&lt;/li>
 &lt;li>套件管理工具
 &lt;ul>
-&lt;li>下指令安裝工具&lt;/li>
-&lt;li>省去自己配置的麻煩&lt;/li>
+&lt;li>指令安裝套件工具&lt;/li>
+&lt;li>省去自己設定的麻煩&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

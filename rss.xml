@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 04 Sep 2020 15:19:00 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Chocolatey 安裝</title><link>https://virgil246.github.io/posts/chocolatey-install/</link><guid isPermaLink="true">https://virgil246.github.io/posts/chocolatey-install/</guid><pubDate>Fri, 04 Sep 2020 23:01:20 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="簡介">簡介&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.74.3 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 05 Sep 2020 15:44:05 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>Chocolatey 安裝</title><link>https://virgil246.github.io/posts/chocolatey-install/</link><guid isPermaLink="true">https://virgil246.github.io/posts/chocolatey-install/</guid><pubDate>Fri, 04 Sep 2020 23:01:20 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="簡介">簡介&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://chocolatey.org/">官方網站&lt;/a>&lt;/li>
 &lt;/ul>
@@ -146,7 +146,7 @@
 &lt;p>X 無child 停止&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>X 有child 無 grandchild&lt;/p>
+&lt;p>Root之子孫中Min出現在Root的&lt;strong>左右子點&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>找出child中最小值 k
 &lt;div class="highlight">&lt;div class="chroma">
@@ -154,18 +154,21 @@
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="k">if&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">k&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
+&lt;span class="nx">exit&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;/li>
 &lt;/ol>
 &lt;/li>
 &lt;li>
-&lt;p>有grandchild&lt;/p>
+&lt;p>Root之子孫中Min出現在Root的&lt;strong>孫子&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>找出grandchild中最小 k ，p為k之parent&lt;/li>
 &lt;/ol>
@@ -182,9 +185,9 @@
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="k">if&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">//與 min-level 比較
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">k&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">k&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="nx">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="nx">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="c1">// 換下去之後要跟 max-level 比較
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nf">Swap_val&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">X&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="c1">//以K的原位作為ROOT再次判斷case
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Switch&lt;/span>&lt;span class="p">)&lt;/span>

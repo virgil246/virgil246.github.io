@@ -37,21 +37,23 @@ categories: ["筆記"]
     3. X插入Root
     * Case
        1. X 無child 停止
-       2. X 有child 無 grandchild 
+       2. Root之子孫中Min出現在Root的**左右子點** 
           1. 找出child中最小值 k
                 ```go
                 if k.val < X.val {
                     Swap(k,X)
                 }
+                exit
+                
                 ```
               
-      1. 有grandchild  
+      1. Root之子孫中Min出現在Root的**孫子**
           1. 找出grandchild中最小 k ，p為k之parent
             ```go
             if k.val < X.val { //與 min-level 比較
-                Swap(k,X) 
+                Swap(X,k) 
                 if X.val > p.val {// 換下去之後要跟 max-level 比較
-                    Swap(X,p)
+                    Swap_val(X,p)
                 }
                 //以K的原位作為ROOT再次判斷case
                 goto(Switch)

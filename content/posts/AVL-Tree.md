@@ -1,7 +1,7 @@
 ---
 title: "AVL Tree"
 date: 2020-09-05T23:10:08+08:00
-draft: true
+draft: false
 categories: ["筆記"]
 tags: ["BST",]
 ---

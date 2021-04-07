@@ -1,7 +1,7 @@
 ---
 title: "Kubeadm"
 date: 2021-04-01T10:36:36+08:00
-draft: false
+draft: true
 categories: ["教學"]
 tags: ["KubeAdm","Kubenernet"]
 ---

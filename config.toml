@@ -231,6 +231,10 @@ uglyURLs = false
     # 是否开启
     enableHeader = true
 
+    # 是否自動隱藏
+    enableHeaderAutoHide = false
+    # 說明：僅對彈性佈局的頂欄有效
+    
     # 是否在首页显示
     displayHeaderInHome = true
     # 说明：对弹性布局的顶栏无效

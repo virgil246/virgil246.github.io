@@ -37,6 +37,7 @@ from idea to production
         blog $ git init
         blog $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
         ```  
+        > [用 Git Submodule 管理 Hugo Theme](https://www.dazhuanlan.com/2019/12/06/5dea271c486c2/)
     2.  用範例`config.toml` 取代原本的`config.toml`
         ```bash
         rm config.toml && cp themes/meme/config-examples/en/config.toml config.toml

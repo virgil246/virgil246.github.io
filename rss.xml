@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.80.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 22 Jan 2021 07:19:26 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>AVL Tree</title><link>https://virgil246.github.io/posts/avl-tree/</link><guid isPermaLink="true">https://virgil246.github.io/posts/avl-tree/</guid><pubDate>Sat, 05 Sep 2020 23:10:08 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="avl-tree">AVL Tree&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>virgil246的Blog</title><link>https://virgil246.github.io/</link><description>virgil246的Blog 專放一些踩坑筆記 教學</description><generator>Hugo 0.82.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>virgil246@gmail.com (virgil246)</managingEditor><webMaster>virgil246@gmail.com (virgil246)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 07 Apr 2021 12:59:25 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://virgil246.github.io/rss.xml"/><item><title>AVL Tree</title><link>https://virgil246.github.io/posts/avl-tree/</link><guid isPermaLink="true">https://virgil246.github.io/posts/avl-tree/</guid><pubDate>Sat, 05 Sep 2020 23:10:08 +0800</pubDate><author>virgil246@gmail.com (virgil246)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="avl-tree">AVL Tree&lt;/h1>
 &lt;h2 id="def">Def&lt;/h2>
 &lt;ul>
 &lt;li>Height Balance BST&lt;/li>
@@ -463,7 +463,10 @@ blog $ git init
 blog $ git submodule add --depth &lt;span class="m">1&lt;/span> https://github.com/reuixiy/hugo-theme-meme.git themes/meme
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;/li>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a href="https://www.dazhuanlan.com/2019/12/06/5dea271c486c2/">用 Git Submodule 管理 Hugo Theme&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;/li>
 &lt;li>用範例&lt;code>config.toml&lt;/code> 取代原本的&lt;code>config.toml&lt;/code>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
